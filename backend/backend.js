@@ -29,7 +29,7 @@ app.post('/api/send-email', (req, res) => {
   // Set up email data
   const mailOptions = {
     from: email, // Sender address
-    to: 'receiver-email@gmail.com', // Your email (to receive messages)
+    to: process.env.GMAIL_RECIEVER, // Your email (to receive messages)
     subject: 'New Contact Form Submission',
     text: `You have recieve a new message from: ${email}
     
